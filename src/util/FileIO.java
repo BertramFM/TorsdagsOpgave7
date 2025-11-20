@@ -22,12 +22,12 @@ public class FileIO {
                 String[] p = line.split(";");
 
                 Vare newItem = new Vare(
-                        p[0],                       // String id
-                        p[1],                       // String name
-                        LocalDate.parse(p[2]),      // localDate priceDate
-                        Double.parseDouble(p[3]),   // double price
-                        Double.parseDouble(p[5]),     // quantity
-                        p[6]                        // String unit
+                        p[0].trim(),                        // String id
+                        p[1].split(",")[0].trim(),    // String name
+                        LocalDate.parse(p[2]),              // localDate priceDate
+                        Double.parseDouble(p[3]),           // double price
+                        Double.parseDouble(p[5]),           // quantity
+                        p[6]                                // String unit
                 );
                 Varer.add(newItem);
 

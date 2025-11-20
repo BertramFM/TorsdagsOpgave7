@@ -45,7 +45,7 @@ public class Robot {
             Vare vare = alleVarer.stream().skip(random.nextInt(alleVarer.size())).findFirst().get();
             // og put det antal styk i kurven
             while (styk > 0) {
-                kurv.add(String.valueOf(vare));
+                kurv.add(vare.getEan());
                 styk--;
             }
         }
