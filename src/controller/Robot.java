@@ -28,12 +28,12 @@ public class Robot {
      * @return en kurv med varer i vilkårlig rækkefølge
      */
 
-    public Collection<Vare> fyldIKurv(Collection<Vare> alleVarer) {
+    public List<String> fyldIKurv(List<Vare> alleVarer) {
         // hav en god random klar!
         Random random = new Random();
 
         // lav en kurv til varerne
-        List<Vare> kurv = new ArrayList<>();
+        List<String> kurv = new ArrayList<>();
 
         // find på et tilfældigt antal varer, mellem 5 og 25
         int antalVarer = random.nextInt(min, max);
@@ -45,7 +45,7 @@ public class Robot {
             Vare vare = alleVarer.stream().skip(random.nextInt(alleVarer.size())).findFirst().get();
             // og put det antal styk i kurven
             while (styk > 0) {
-                kurv.add(vare);
+                kurv.add(String.valueOf(vare));
                 styk--;
             }
         }

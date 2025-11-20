@@ -7,10 +7,10 @@ public class Vare {
     private String name;
     private LocalDate priceDate;
     private double price;
-    private int quantity;
+    private double quantity;
     private String unit;
 
-    public Vare(String ean, String name, LocalDate priceDate, double price, int quantity, String unit) {
+    public Vare(String ean, String name, LocalDate priceDate, double price, double quantity, String unit) {
         this.ean = ean;
         this.name = name;
         this.priceDate = priceDate;
@@ -34,7 +34,7 @@ public class Vare {
         return price;
     }
 
-    public int getQuantity() {
+    public double getQuantity() {
         return quantity;
     }
 
